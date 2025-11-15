@@ -15,33 +15,13 @@ Su interfaz intuitiva mejora la eficiencia del personal, reduce pérdidas por de
 
 ---
 
-##  Características Principales
+## Características principales
 
--  **Inventario inteligente**  
-  - Registro de productos, categorías, unidades, costos y precios.  
-  - Alertas automáticas cuando un producto alcanza stock crítico.  
-  - Histórico de movimientos: entradas, salidas y ajustes.
-
--  **Gestión de ventas**  
-  - Punto de venta (POS).  
-  - Cálculo automático de totales, impuestos y cambio.    
-  - Control de caja.
-
--  **Control de proveedores y clientes**  
-  - Registro, consulta y edición.  
-  - Historial de compras y ventas.
-
--  **Reportes y estadísticas**  
-  - Ventas diarias, semanales y mensuales.  
-  - Ranking de productos más vendidos.  
-  - Rentabilidad y márgenes.  
-
--  **Interfaz moderna con PyQt6**  
-  - Diseño responsivo y limpio.  
-  - Íconos personalizados.
-
--  **Base de datos local con SQLite3**  
-  - Rápido, ligero y portable.
+- Control completo de inventario con alertas de stock bajo.   
+- Gestión de proveedores y clientes.  
+- Reportes financieros y de ventas.  
+- Interfaz gráfica amigable basada en entorno Windows.  
+- Base de datos local.  
 
 ---
 
@@ -79,10 +59,10 @@ Su interfaz intuitiva mejora la eficiencia del personal, reduce pérdidas por de
 | **Memoria RAM recomendada** | 4 GB o más |
 ---
 
-##  Banner
+## Banner
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=2800&pause=1000&center=true&vCenter=true&color=00BFFF&width=650&lines=NailStock+Software;Sistema+de+Gesti%C3%B3n+para+Ferreter%C3%ADas;Desarrollado+en+Python+%26+PyQt6;Proyecto+Final+de+Ingenier%C3%ADa+en+Software" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=2800&pause=1000&center=true&vCenter=true&color=00BFFF&width=900&lines=NailStock+Software;Sistema+de+Gesti%C3%B3n+para+Ferreter%C3%ADas;Desarrollado+en+Python+%26+PyQt6;Proyecto+Final+de+Ingenier%C3%ADa+en+Software" alt="Typing SVG" />
 </p>
 
 ---
@@ -93,6 +73,7 @@ NailStock representa el compromiso, dedicación y visión de un equipo decidido 
 
 Gracias por acompañarnos.  
 ---
+```text
   _   _       _                  _      ____     _____   U  ___ u   ____   _  __    
  | \ |"|  U  /"\  u     ___     |"|    / __"| u |_ " _|   \/"_ \/U /"___| |"|/ /    
 <|  \| |>  \/ _ \/     |_"_|  U | | u <\___ \/    | |     | | | |\| | u   | ' /     
