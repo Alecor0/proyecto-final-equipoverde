@@ -1,6 +1,6 @@
 # NailStock - Software
 <p align="center">
-  <img src="nailstock/assets/icons/NailStock.png" alt="NailStock Logo" width="230"/>
+  <img src="nailstock/assets/images/mainicon.png" alt="NailStock Logo" width="230"/>
 </p>
 
 <h1 align="center">NailStock</h1>
