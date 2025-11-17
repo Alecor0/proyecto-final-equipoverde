@@ -3,9 +3,9 @@ from PyQt6.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QTableWidget,
                              QHeaderView, QMessageBox, QDialog, QFormLayout,
                              QTextEdit, QLabel)
 from PyQt6.QtCore import Qt
-from models.proveedor_model import ProveedorModel
-from controllers.proveedor_controller import ProveedorController
-from utils.mensajes import Mensajes
+from ..models.proveedor_model import ProveedorModel
+from ..controllers.proveedor_controller import ProveedorController
+from ..utils.mensajes import Mensajes
 
 class ProveedoresView(QWidget):
     def __init__(self):

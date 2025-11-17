@@ -1,4 +1,4 @@
-from models.proveedor_model import ProveedorModel
+from ..models.proveedor_model import ProveedorModel
 
 class ProveedorController:
     @staticmethod

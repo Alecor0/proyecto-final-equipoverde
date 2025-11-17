@@ -1,5 +1,16 @@
 import sqlite3
 from pathlib import Path
+import os
+import sys
+
+def resource_path(relative_path: str) -> str:
+    try:
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")  
+
+    return os.path.join(base_path, relative_path)
+
 
 class DBConnection:
     def __init__(self):
@@ -15,12 +26,20 @@ class DBConnection:
     def _create_tables(self):
         with self.get_connection() as conn:
             cursor = conn.cursor()
-            
-            script_path = Path(__file__).parent / "create_tables.sql"
-            with open(script_path, 'r', encoding='utf-8') as f:
-                cursor.executescript(f.read())
-            
 
+            sql_file_path = resource_path("create_tables.sql")
+
+            if not os.path.exists(sql_file_path):
+                return
+
+            with open(sql_file_path, "r", encoding="utf-8") as f:
+                script = f.read()
+
+            cursor.executescript(script)
+            conn.commit()
+
+
+# Instancia global
 _db_connection = DBConnection()
 
 def get_db_connection():

@@ -1,0 +1,2 @@
+pip install -r "requirements.txt"
+pyinstaller --onefile --noconsole --icon "nailstock\assets\icons\nsicon.ico" --add-data "nailstock\database\create_tables.sql;." main.py && rmdir /s /q build && del main.spec

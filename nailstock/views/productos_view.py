@@ -3,10 +3,10 @@ from PyQt6.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QTableWidget,
                              QHeaderView, QDialog, QFormLayout, 
                              QSpinBox, QDoubleSpinBox, QLabel)
 from PyQt6.QtCore import Qt
-from models.producto_model import ProductoModel
-from models.proveedor_model import ProveedorModel
-from controllers.producto_controller import ProductoController
-from utils.mensajes import Mensajes
+from ..models.producto_model import ProductoModel
+from ..models.proveedor_model import ProveedorModel
+from ..controllers.producto_controller import ProductoController
+from ..utils.mensajes import Mensajes
 
 class ProductosView(QWidget):
     def __init__(self):

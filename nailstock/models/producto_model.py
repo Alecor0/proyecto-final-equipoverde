@@ -1,4 +1,4 @@
-from database.db_connection import get_db_connection
+from ..database.db_connection import get_db_connection
 
 class ProductoModel:
     @staticmethod

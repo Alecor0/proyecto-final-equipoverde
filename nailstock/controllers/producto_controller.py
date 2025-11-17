@@ -1,4 +1,4 @@
-from models.producto_model import ProductoModel
+from ..models.producto_model import ProductoModel
 
 class ProductoController:
     @staticmethod

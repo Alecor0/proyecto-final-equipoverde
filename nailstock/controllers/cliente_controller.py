@@ -1,4 +1,4 @@
-from models.cliente_model import ClienteModel
+from ..models.cliente_model import ClienteModel
 
 class ClienteController:
     @staticmethod

@@ -2,8 +2,8 @@ from PyQt6.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QPushButton,
                              QLabel, QFileDialog, QGroupBox, QMessageBox,
                              QFormLayout, QLineEdit)
 from PyQt6.QtCore import QProcess
-from database.backup import crear_respaldo, restaurar_respaldo
-from utils.mensajes import Mensajes
+from ..database.backup import crear_respaldo, restaurar_respaldo
+from ..utils.mensajes import Mensajes
 import os
 import sys
 import subprocess

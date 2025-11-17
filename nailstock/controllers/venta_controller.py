@@ -1,4 +1,4 @@
-from models.venta_model import VentaModel
+from ..models.venta_model import VentaModel
 
 class VentaController:    
     @staticmethod

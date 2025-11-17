@@ -4,9 +4,9 @@ os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
 
 import sys
 from PyQt6.QtWidgets import QApplication
-from database.db_connection import DBConnection
-from views.login_view import LoginView
-from views.main_window import MainWindow
+from nailstock.database.db_connection import DBConnection
+from nailstock.views.login_view import LoginView
+from nailstock.views.main_window import MainWindow
 
 class NailStackApp:
     def __init__(self):

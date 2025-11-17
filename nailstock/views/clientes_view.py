@@ -1,11 +1,10 @@
 from PyQt6.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QTableWidget, 
                              QTableWidgetItem, QPushButton, QLineEdit, 
-                             QHeaderView, QMessageBox, QDialog, QFormLayout,
+                             QHeaderView, QDialog, QFormLayout,
                              QLabel)
-from PyQt6.QtCore import Qt
-from models.cliente_model import ClienteModel
-from controllers.cliente_controller import ClienteController
-from utils.mensajes import Mensajes
+from ..models.cliente_model import ClienteModel
+from ..controllers.cliente_controller import ClienteController
+from ..utils.mensajes import Mensajes
 
 class ClientesView(QWidget):
     def __init__(self):

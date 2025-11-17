@@ -1,4 +1,4 @@
-from database.db_connection import get_db_connection
+from ..database.db_connection import get_db_connection
 import csv
 
 class Reportes:
@@ -40,11 +40,10 @@ class Reportes:
         cursor = conn.cursor()
         
         query = '''
-            SELECT v.id, c.nombre as cliente, u.nombre as vendedor, 
+            SELECT v.id, c.nombre as cliente, 
                    v.total, v.fecha_venta
             FROM ventas v
             JOIN clientes c ON v.cliente_id = c.id
-            JOIN usuarios u ON v.usuario_id = u.id
         '''
         
         params = []
@@ -61,7 +60,7 @@ class Reportes:
         with open(ruta_archivo, 'w', newline='', encoding='utf-8') as archivo:
             writer = csv.writer(archivo)
             writer.writerow([
-                'ID Venta', 'Cliente', 'Vendedor', 'Total', 'Fecha Venta'
+                'ID Venta', 'Cliente', 'Total', 'Fecha Venta'
             ])
             
             for venta in ventas:

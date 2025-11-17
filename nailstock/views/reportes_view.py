@@ -1,11 +1,11 @@
 from PyQt6.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QPushButton, 
-                             QLabel, QComboBox, QDateEdit, QTableWidget, 
-                             QTableWidgetItem, QHeaderView, QMessageBox,
+                             QLabel, QDateEdit, QTableWidget, 
+                             QTableWidgetItem, QHeaderView,
                              QFileDialog, QGroupBox, QFormLayout)
 from PyQt6.QtCore import QDate, Qt
-from datetime import datetime, timedelta
-from utils.reportes import Reportes
-from utils.mensajes import Mensajes
+from datetime import datetime
+from ..utils.reportes import Reportes
+from ..utils.mensajes import Mensajes
 
 class ReportesView(QWidget):
     def __init__(self):
