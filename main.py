@@ -3,6 +3,43 @@ os.environ["QT_ENABLE_HIGHDPI_SCALING"] = "0"
 os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
 
 import sys
+
+# --- Comprobación y elevación a administrador (solo Windows) ---
+if os.name == "nt":
+    import ctypes
+
+    def is_user_admin() -> bool:
+        """
+        Verifica si el proceso actual se está ejecutando con privilegios de administrador.
+        Devuelve True si es administrador, False en caso contrario.
+        """
+        try:
+            return ctypes.windll.shell32.IsUserAnAdmin()
+        except Exception:
+            return False
+
+    if not is_user_admin():
+        # Si no es administrador, intentar relanzar el script con privilegios elevados
+        params = " ".join([f'"{arg}"' for arg in sys.argv[1:]])
+        try:
+            ctypes.windll.shell32.ShellExecuteW(
+                None,
+                "runas",          # Verbo para solicitar elevación
+                sys.executable,   # Intérprete de Python actual
+                f'"{sys.argv[0]}" {params}',
+                None,
+                1                 # Mostrar ventana normal
+            )
+        except Exception as e:
+            # Si falla la elevación, mostrar un mensaje y salir con error
+            ctypes.windll.user32.MessageBoxW(
+                None,
+                f"No se pudo ejecutar como administrador.\n\nDetalle: {e}",
+                "NailStack - Error de permisos",
+                0x00000010  # MB_ICONERROR
+            )
+        sys.exit(0)  # Terminar el proceso actual (no admin)
+# --- Fin de comprobación de administrador ---
 from PyQt6.QtWidgets import QApplication
 from nailstock.database.db_connection import DBConnection
 from nailstock.views.login_view import LoginView
